@@ -48,13 +48,13 @@ body{
     background-position: center;
   
 }
-
+/* reader */
 .header {     
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem 3rem;
+   
 }
 
 .logo a {
@@ -112,7 +112,7 @@ body{
     
     
     display: inline;
-    top: calc(50% - 50px);
+    top: calc(50% - 2rem);
     transform: translateX(-50%);
     text-align: center;
     font-size: 14px;
@@ -140,14 +140,15 @@ body{
     color: var(--vt-c-black);
     box-shadow: 0 0 20px var(--vt-c-divider-dark-2);
 }
-
+/* HOME PAGE */
+/* Home */  
 .home{
     display: block;
     flex-direction: column;
     align-items: center;      /* Centraliza horizontalmente */
     text-align: center;      /* Alinha o texto ao centro */
     min-height: 80vh;        /* Altura mínima para ocupar a tela */
-    padding: 2rem;
+    padding: 0 2rem;
     margin: 0 auto;
     max-width: 1200px;  
 }
@@ -158,12 +159,178 @@ body{
     color: var(--vt-c-divider-dark-1);
 }
 .content h1 a {
-    color: var(--vt-c-divider-dark-1);
-    text-shadow: 0px 0px 100px var(--vt-c-divider-dark-1);
+    color: var(--vt-c-divider-light-1);
+    text-shadow: 0px 0px 40px var(--vt-c-divider-dark-1);
     transition: all 0.3s ease-in-out;
  
 }
 .content h1 a:hover{
     color: var(--vt-c-divider-light-1);
-    text-shadow: 0px 0px 200px var(--vt-c-divider-light-1);
+    text-shadow: 0px 0px 60px var(--vt-c-divider-light-1);
+}
+/* Services */
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+    margin: 0 auto;
+    max-width: 1200px; 
+    color: var(--vt-c-divider-dark-1);
+    font-size: 2rem; 
+
+}
+.services h1 {
+    font-size: 5rem;
+    margin: 2rem 0;
+    padding: 2rem;
+    color: var(--vt-c-divider-light-1);
+    text-shadow: 0px 0px 40px var(--vt-c-divider-dark-1);
+    transition: all 0.3s ease-in-out;
+}
+.services h1:hover {
+    color: var(--vt-c-divider-light-1);
+    text-shadow: 0px 0px 60px var(--vt-c-divider-light-1);
+}
+.jobs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 2rem var(--vt-c-divider-dark-2);
+    overflow: hidden;
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 2rem var(--vt-c-divider-light-1);
+}
+
+.card img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.card h3 {
+    margin-bottom: 0.5rem;
+    color: var(--vt-c-black);
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--vt-c-divider-dark-1);
+    color: var(--vt-c-white);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #3498db;
+}
+
+/* Responsividade: 1 card por linha em telas pequenas */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.sobre-nos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20rem auto;
+    padding: 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.about-content h2 {
+    font-size: 5rem;
+    
+    color: var(--vt-c-divider-dark-1);
+    margin-bottom: 1rem;
+}
+
+.about-content p {
+    color: var(--vt-c-divider-dark-1);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+.about-btn {
+    display: inline-block;
+    background: var(--vt-c-divider-dark-1);
+    color: var(--vt-c-white);
+    font-weight: bold;
+    font-size: xxx-large;
+    
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.about-btn:hover {
+    background: var(--vt-c-divider-light-1);
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    
+}
+
+/* Responsividade: empilha em telas pequenas */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 100%;
+    }
 }
