@@ -150,7 +150,7 @@ body{
     min-height: 80vh;        /* Altura mínima para ocupar a tela */
     padding: 0 2rem;
     margin: 0 auto;
-    max-width: 1200px;  
+    
 }
 .content{
     position: relative;
@@ -181,7 +181,7 @@ body{
     font-size: 2rem; 
 
 }
-.services h1 {
+.title {
     font-size: 5rem;
     margin: 2rem 0;
     padding: 2rem;
@@ -189,11 +189,11 @@ body{
     text-shadow: 0px 0px 40px var(--vt-c-divider-dark-1);
     transition: all 0.3s ease-in-out;
 }
-.services h1:hover {
+.title:hover {
     color: var(--vt-c-divider-light-1);
     text-shadow: 0px 0px 60px var(--vt-c-divider-light-1);
 }
-.jobs{
+.jobs, .creators {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -248,7 +248,7 @@ body{
 }
 
 .btn:hover {
-    background: #3498db;
+    background: var(--vt-c-divider-light-2);
 }
 
 /* Responsividade: 1 card por linha em telas pequenas */
@@ -275,12 +275,6 @@ body{
     padding-right: 2rem;
 }
 
-.about-content h2 {
-    font-size: 5rem;
-    
-    color: var(--vt-c-divider-dark-1);
-    margin-bottom: 1rem;
-}
 
 .about-content p {
     color: var(--vt-c-divider-dark-1);
@@ -333,4 +327,33 @@ body{
     .about-image img {
         width: 100%;
     }
+}
+/* criadores */
+.member{
+    border-radius: 10px;
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 270px;
+    
+}
+
+
+
+.member img  {
+    width: 100%;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 2rem var(--vt-c-divider-dark-2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.member-img:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 2rem var(--vt-c-divider-light-1);
+}
+.member-name{
+    font-size: 2rem;
+    color: var(--vt-c-divider-dark-1);
+    margin: 1rem 2rem;
 }
